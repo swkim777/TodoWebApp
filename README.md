@@ -60,6 +60,8 @@ TodoWebApp/
 
 이 프로젝트는 MIT License를 따릅니다.
 
+![App Screenshot](./public/TodoWebApp.png)
+
 ---
 
 ### 💡 팁: README 관리
