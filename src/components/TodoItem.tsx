@@ -1,14 +1,19 @@
+/**
+ * @file TodoItem.tsx
+ * @description Renders an individual todo item with editing and completion toggling features.
+ * Uses Framer Motion for smooth animations and Lucide-React for iconography.
+ */
 import { useState, useRef, useEffect } from 'react';
 import { Todo } from '../types/todo';
 import { useTodoContext } from '../context/TodoContext';
 import { Check, Trash2, Edit2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-interface TodoItemProps {
-  todo: Todo;
-}
-
-export const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
+/**
+ * Individual Todo Item Component.
+ * Supports inline editing on double-click and completion status toggling.
+ */
+export const TodoItem = ({ todo }: { todo: Todo }) => {
   const { toggleTodo, deleteTodo, updateTodo } = useTodoContext();
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(todo.text);

@@ -1,9 +1,17 @@
+/**
+ * @file TodoList.tsx
+ * @description Container component that filters and renders the list of todos.
+ * Handles empty states and provides filter controls (All, Active, Completed).
+ */
 import { useTodoContext } from '../context/TodoContext';
 import { TodoItem } from './TodoItem';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ClipboardList, CheckCircle, Circle } from 'lucide-react';
 
-
+/**
+ * TodoList Component.
+ * Displays filtered todos and provides a dashboard view of task metrics.
+ */
 export const TodoList = () => {
   const { todos, filter, setFilter, clearCompleted } = useTodoContext();
 

@@ -1,8 +1,17 @@
+/**
+ * @file TodoForm.tsx
+ * @description Input component for creating new todo items.
+ * Includes validation to prevent empty submissions and a premium look.
+ */
 import { useState } from 'react';
 import { useTodoContext } from '../context/TodoContext';
 import { PlusCircle } from 'lucide-react';
 
-export const TodoForm: React.FC = () => {
+/**
+ * TodoForm Component.
+ * Provides a modern input field for task creation.
+ */
+export const TodoForm = () => {
   const [text, setText] = useState('');
   const { addTodo } = useTodoContext();
 
